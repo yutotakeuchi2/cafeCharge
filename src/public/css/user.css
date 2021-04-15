@@ -1,0 +1,21 @@
+body{
+  margin: 0;
+  background-color: cornflowerblue;
+  text-align: center;
+}
+
+.title{
+  border-bottom: black double 10px;
+  font-size: 100px;
+  margin: auto;
+  background-color: crimson;
+}
+
+.container{
+  margin: 100px;
+}
+
+.profile-name{
+  font-size: 30px;
+  margin: 60px;
+}
