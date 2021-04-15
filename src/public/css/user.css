@@ -1,0 +1,13 @@
+body{
+  margin: 0;
+  background-color: aqua;
+  text-align: center;
+}
+
+.title{
+  border-bottom: black double 10px;
+}
+
+.container{
+  margin: 50px 30px;
+}
