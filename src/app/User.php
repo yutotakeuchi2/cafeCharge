@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    public function getUsers(){
+    public static function getUsers(){
         return User::all();
     }
 }
