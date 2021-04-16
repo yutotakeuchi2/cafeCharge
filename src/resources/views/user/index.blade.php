@@ -3,7 +3,7 @@
 
   <div class="user-wrapper">
     @foreach ($users as $user)
-        <a href="#" class="profile-name">{{$user->name}}</a>
+        <a href="/user/show/{{$user->id}}" class="profile-name">{{$user->name}}</a>
     @endforeach
   </div>
 
