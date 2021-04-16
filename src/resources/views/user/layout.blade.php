@@ -8,6 +8,13 @@
 <body>
   <header>
     <h1 class="title">PROFILE SITE</h1>
+
+   <div class="search-wrapper">
+    <form method="post" action="search.php" class="search">
+     <input type="text" name="search_name">
+     <input type="submit" name="submit" value="検索">
+    </form>
+   </div>
   </header>
 
   <div class="container">
