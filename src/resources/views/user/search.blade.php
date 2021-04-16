@@ -8,7 +8,7 @@
         <p>その名前は存在しません</p>
   　@else
     @foreach ($foundUsers as $user)
-        <p class="profile-name">{{$user->name}}</p>
+        <a href="#" class="profile-name">{{$user->name}}</a>
     @endforeach
     @endif
   </div>
