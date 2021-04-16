@@ -27,10 +27,17 @@ body{
 
 .show-wrapper{
   text-align: left;
-  width: 500px;
+  width: 1000px;
   margin: 40px auto;
 }
 
 .show-content{
   margin: 30px auto;
+  font-family:'Yu Gothic';
+  font-size :30px;
+}
+
+.show_title{
+  font-size:40px;
+  border-bottom:black solid 2px;
 }
