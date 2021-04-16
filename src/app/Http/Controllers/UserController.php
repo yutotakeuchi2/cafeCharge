@@ -13,7 +13,7 @@ class UserController extends Controller
     }
 
     public function searchUser(Request $request){
-        if($request->name == ""){
+        if($request->search_name == ""){
             $errorMessage = "存在しません";
             return view("user/search", compact("errorMessage"));
         }
