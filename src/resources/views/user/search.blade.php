@@ -7,6 +7,6 @@
         <p class="profile-name">{{$user->name}}</p>
     @endforeach
   </div>
-  <a href="user/index">戻る</a>
+  <a href="index">戻る</a>
 
 @endsection

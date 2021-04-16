@@ -10,7 +10,7 @@ class User extends Model
         return User::all();
     }
 
-    public static function searchUser($userName){
-        return User::query()->where("name", $userName)->get();
+    public static function searchByUsers($userName){
+        return User::where("name", 'LIKE', "%$userName%")->get();
     }
 }
