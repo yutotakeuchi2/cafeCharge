@@ -19,3 +19,8 @@ body{
   font-size: 30px;
   margin: 60px;
 }
+
+.search-wrapper{
+  text-align: right;
+  margin: 20px;
+}
