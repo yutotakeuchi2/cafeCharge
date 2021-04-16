@@ -9,12 +9,12 @@
   <header>
     <h1 class="title">PROFILE SITE</h1>
 
-   <div class="search-wrapper">
+    <div class="search-wrapper">
     <form method="get" action="/user/search" class="search">
-     <input type="text" name="search_name">
-     <input type="submit" name="submit" value="検索">
+      <input type="text" name="search_name">
+      <input type="submit" name="submit" value="検索">
     </form>
-   </div>
+    </div>
   </header>
 
   <div class="container">

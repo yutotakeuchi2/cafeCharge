@@ -21,4 +21,8 @@ class UserController extends Controller
         $foundUsers = User::searchByUsers($userName);
         return view("user/search", compact("foundUsers"));
     }
+
+    public function show($id){
+        return view("user/show",["user" => User::getData($id)]);
+    }
 }
