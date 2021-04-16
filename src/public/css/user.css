@@ -24,3 +24,8 @@ body{
   text-align: right;
   margin: 20px;
 }
+
+.show-wrapper{
+  text-align: left;
+  margin: 0 420px;
+}

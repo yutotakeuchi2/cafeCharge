@@ -15,6 +15,6 @@ class User extends Model
     }
 
     public static function getData($id){
-        return User::where("id","$id")->get();
+        return User::where("id", "$id")->get();
     }
 }
