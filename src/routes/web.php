@@ -24,3 +24,9 @@ Route::get("/user/show/{id}","UserController@show");
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/index', function () {
+    return view('index');
+});
+
+Route::post('calculate', "ChargeController@calculate");
