@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ChargeController extends Controller
 {
-    public function calculate(Request $req){
+    public function getCharge(Request $req){
         $courses = array(
             "1h" => array(
                 "price" => 500,
@@ -33,11 +33,12 @@ class ChargeController extends Controller
         //ここから処理
         $enter_date_unix = $enter_date->format("U");
         $exit_date_unix = $exit_date->format("U");
+        $course = $req->course;
         $stay_time = $this->getDifferenceDate($enter_date_unix, $exit_date_unix);
-        //$extension = $this->isExtension($stay_time, $req->course, $courses);
-        $extension_border = $this->calculateExtensionBorder($enter_date_unix, $courses[$req->course]["seconds"]);
-        $charge = $this->calculateCharge($extension_border, $exit_date_unix, $courses[$req->course]["price"]);
-        return view("result", compact("charge","extension_border","exit_date_unix"));
+        $extension_border = $this->calculateExtensionBorder($enter_date_unix, $courses[$course]["seconds"]);
+        $charge = $this->calculateCharge($extension_border, $exit_date_unix, $courses[$course]["price"]);
+        $tax_included_charge = includeTax($charge);
+        return view("result", compact("tax_included_charge","charge","extension_border","exit_date_unix"));
     }
 
     public function formatEnterDate($req)
@@ -58,15 +59,6 @@ class ChargeController extends Controller
     {
         return $exit_date - $enter_date;
     }
-
-    // public function isExtension($stay_time, $customer_course, $courses)
-    // {
-    //     if($stay_time > $courses[$customer_course]["seconds"]){
-    //         return "延長アリ";
-    //     } else {
-    //         return "延長なし";
-    //     }
-    // }
 
     public function calculateExtensionBorder($enter_date, $course_seconds)
     {
@@ -91,4 +83,8 @@ class ChargeController extends Controller
         }
         return $charge;
     }
+}
+
+function includeTax($charge){
+    return $charge * 1.10;
 }

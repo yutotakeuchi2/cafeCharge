@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/user/index', "UserController@index");
@@ -25,8 +25,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/index', function () {
-    return view('index');
-});
-
-Route::post('calculate', "ChargeController@calculate");
+Route::post('calculate', "ChargeController@getCharge");
