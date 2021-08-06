@@ -8,10 +8,10 @@
 <body>
   <form action="/calculate" method="POST">
     @csrf
-    <input type="date" name="enter_day" id="">
+    入店:<input type="date" name="enter_day" id="">
     <input type="time" step="1" name="enter_time" id="">
     <br>
-    <input type="date" name="exit_day" id="">
+    退店:<input type="date" name="exit_day" id="">
     <input type="time" step="1" name="exit_time" id="">
     <br>
     <select name="course" id="">
@@ -20,7 +20,7 @@
       <option value="5h">5時間パック</option>
       <option value="8h">8時間パック</option>
     </select>
-    <input type="submit" name="submit" id="">
+    <input type="submit" name="submit" id="" value="計算">
   </form>
 </body>
 </html>
